@@ -1,3 +1,8 @@
-var myModules = require("./myModules");
+var http = require("http");
 
-console.log(myModules.myDateTime("deneme"));
+http
+  .createServer((req, res) => {
+    res.write("Hello, world!");
+    res.end("end");
+  })
+  .listen(3000);
