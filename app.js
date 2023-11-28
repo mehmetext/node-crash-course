@@ -6,6 +6,15 @@ http
       "Content-Type": "text/html",
     });
     res.write("<h1>Hello, world!</h1>");
-    res.end("end");
+    switch (req.url) {
+      case "/homepage":
+        res.write("Homepage");
+        break;
+      case "/blog":
+        res.write("Blog");
+      default:
+        break;
+    }
+    res.end();
   })
   .listen(3000);
