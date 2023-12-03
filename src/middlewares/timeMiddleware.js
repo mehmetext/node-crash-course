@@ -4,4 +4,4 @@ const timeMiddleware = (req, res, next) => {
   next();
 };
 
-module.exports = timeMiddleware;
+export default timeMiddleware;

@@ -1,12 +1,14 @@
-const express = require("express");
-const categoriesRouter = require("./routes/categoriesRoute");
+import express from "express";
+import categoriesRouter from "./routes/categoriesRoute.js";
+import timeMiddleware from "./middlewares/timeMiddleware.js";
+
 const app = express();
 
 //for public folder
-app.use("/public", express.static("public"));
+app.use("/public", express("public"));
 
 //for timeMiddleware
-app.use(require("./middlewares/timeMiddleware"));
+app.use(timeMiddleware);
 
 //for nested router
 app.use("/categories", categoriesRouter);

@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 
 const categoriesRoute = express.Router();
 
@@ -21,4 +21,4 @@ categoriesRoute.get("/electronics", (req, res) => {
   res.send("Electronics");
 });
 
-module.exports = categoriesRoute;
+export default categoriesRoute;
