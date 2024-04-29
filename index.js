@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-//sync (blocking)
+/* //sync (blocking)
 fs.writeFileSync("log.txt", "text");
 
 //async (non-blocking)
@@ -20,4 +20,8 @@ fs.readFile("log-2.txt", "utf-8", (err, data) => {
 
   console.log("readFile", data);
 });
-console.log(5);
+console.log(5); */
+
+// fs.appendFileSync("log.txt", "eleman eklendi");
+// fs.unlinkSync("log.txt"); //Dosyayı siler.
+fs.mkdirSync("test/test");
