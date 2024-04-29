@@ -24,4 +24,4 @@ console.log(5); */
 
 // fs.appendFileSync("log.txt", "eleman eklendi");
 // fs.unlinkSync("log.txt"); //Dosyayı siler.
-fs.mkdirSync("test/test");
+// fs.mkdirSync("test/test");
