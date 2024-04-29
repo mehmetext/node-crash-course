@@ -25,6 +25,11 @@ app.use("/about", (req, res) => {
   res.json({ message: "hakkımda" });
 });
 
+app.use("/", (req, res, next) => {
+  console.log("bu bir middleware (ara katman)");
+  next();
+});
+
 app.use("/", (req, res) => {
   res.send("express ile oluşan ana sayfa.");
 });
