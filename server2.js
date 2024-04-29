@@ -2,6 +2,22 @@ const express = require("express");
 
 const app = express();
 
+const products = [
+  { id: 0, name: "Bilgisayar" },
+  { id: 1, name: "Telefon" },
+  { id: 2, name: "Kulaklık" },
+  { id: 3, name: "Saat" },
+];
+
+app.use("/products/:id", (req, res) => {
+  const product = products.find((p) => p.id == req.params.id);
+  res.json(product);
+});
+
+app.use("/products", (req, res) => {
+  res.json(products);
+});
+
 app.use("/about", (req, res) => {
   // res.send("express ile oluşan hakkımda.");
   res.json({ message: "hakkımda" });
