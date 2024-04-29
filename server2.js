@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.static("public"));
+
 const products = [
   { id: 0, name: "Bilgisayar" },
   { id: 1, name: "Telefon" },
